@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-export function Descripcion(){
+export function AmpliarInfo(){
 
     const location = useLocation();
 

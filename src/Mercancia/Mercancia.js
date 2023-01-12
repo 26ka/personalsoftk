@@ -1,83 +1,85 @@
-import {Footer} from '../shared/Footer/Footer'
-
-import { useNavigate } from 'react-router-dom'
+import { Footer } from "../shared/Footer/Footer"
+import { useNavigate } from "react-router-dom"
 
 export function Mercancia(){
 
-    const navigate = useNavigate();
+    //Activamos la navegacion entre componentes cuadno se de un evento
 
-    function detectarMercancia(producto){
+    let navegacion=useNavigate()
 
-       
-        navigate('/descripcion',{
-            state:{
-                producto
-            }
+    //que hago cuando se de el evento...
+    function detectarEventos(productoSelecionado){
+        navegacion('/tienda',{
+            state:{productoSelecionado}
         })
-
+        
     }
 
-
-    let titulo="Productos de la banda"
+    let titulo="PRODUCTOS DE LA BANDA"
 
     let productos=[
-
         {
-            nombre:"Camiseta original gira colombiana",
-            foto:"https://firebasestorage.googleapis.com/v0/b/personalsoft-a1bec.appspot.com/o/producto1.jpg?alt=media&token=6b01ba87-63ea-4fd5-a411-5bc7160623ef",
-            precio:40,
-            id:1
-
-        },
-        { 
-            nombre:"LP Original disco morning sessions",
-            foto:"https://firebasestorage.googleapis.com/v0/b/personalsoft-a1bec.appspot.com/o/producto2.jpg?alt=media&token=808ac1ff-fa31-4d76-886f-7f3f0befea97",
-            precio:90,
-            id:2
+            nombre:"Sudadera de corazon",
+            foto:"https://firebasestorage.googleapis.com/v0/b/spotykrl.appspot.com/o/Captura.PNG?alt=media&token=b2b93637-5629-4e50-a74f-1c9d9fd4e7f6",
+            precio:50000
         },
         {
-            nombre:"Mascota INCUBUS",
-            foto:"https://firebasestorage.googleapis.com/v0/b/personalsoft-a1bec.appspot.com/o/producto4.jpg?alt=media&token=41afe26a-bab9-48b9-bb68-c28425d6e544",
-            precio:25,
-            id:3
+            nombre:"Bluso",
+            foto:"https://firebasestorage.googleapis.com/v0/b/spotykrl.appspot.com/o/Captura%201.PNG?alt=media&token=45857d8c-6f0f-4903-be43-0282697af04b",
+            precio:70000
+        },
+        {
+            nombre:"Cuaderno",
+            foto:"https://firebasestorage.googleapis.com/v0/b/spotykrl.appspot.com/o/cuaderno.jpg?alt=media&token=f3fc1583-b0ec-47d8-87fb-28ec78567a2c",
+            precio:15000
+        },
+        {
+            nombre:"Gorra",
+            foto:"https://firebasestorage.googleapis.com/v0/b/spotykrl.appspot.com/o/Captura%203.PNG?alt=media&token=05c86b22-7e56-4572-bf69-eda8f08986bf",
+            precio:25000
+        },
+        {
+            nombre:"Sombrero",
+            foto:"https://firebasestorage.googleapis.com/v0/b/spotykrl.appspot.com/o/sombreros.jpg.crdownload?alt=media&token=75125cf3-5fc8-4117-97a2-289c08f1325b",
+            precio:30000
+        },
+        {
+            nombre:"Gitarra",
+            foto:"https://firebasestorage.googleapis.com/v0/b/spotykrl.appspot.com/o/gitarra.jpg?alt=media&token=2e71f390-439d-400c-b28e-0b9afddc5c0d",
+            precio:1200000
         }
     ]
 
-
     return(
         <>
-            <h1 className="text-center my-5">{titulo}</h1>
+            <h1 className="text-center p-5">{titulo}</h1>
             <div className="container">
                 <div className="row row-cols-1 row-cols-md-3 g-5">
-
-                    {
-                       productos.map(function(producto,id){
-                        
-                        return( 
+                   {
+                    productos.map(function(producto,id){
+                        return(
                             <div key={id}>
-
-                                <div className="col h-100">
-                                        
-                                    <div className="card h-100 shadow">
-
-                                        <img src={producto.foto} alt="foto" className="h-100 img-fluid w-100" />
-
-                                        <button className="btn btn-primary mx-4 my-2" onClick={function(){detectarMercancia(producto)}}>Ampliar</button>
-                                    </div>
-                                </div>
+                                 <div className="col pb-5 h-100 p-2">
+                                 <div className="card shadow text-center h-100 p-2 ">
+                                    <img src={producto.foto} alt="foto" className="h-100 img-fluid w-100" />
+                                    <h1>{producto.nombre}</h1>
+                                    <h3>COP: {producto.precio}<i className="bi bi-currency-dollar me-4"></i>        
+                                    <i className="bi bi-gift"></i></h3>
+                                    <button className="btn btn-primary mx-3 my-3" onClick={
+                                        function(){
+                                            detectarEventos(producto)
+                                        }
+                                    }>Ampliar</button>
+                                 </div>
+                                 </div> 
                             </div>
-                            
                         )
-                       }) 
-                    }
+                    })
+                   }
 
                 </div>
             </div>
-            <br/><br/>
-            <br/><br/>
-            <br/><br/>
             <Footer/>
-
         </>
     )
 }

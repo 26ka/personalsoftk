@@ -1,17 +1,17 @@
-export async function consultarcancionestop(){
+export async function servicioscancionesTop(){
 
 
-    const URI="https://api.spotify.com/v1/artists/3YcBF2ttyueytpXtEzn1Za/top-tracks?market=US"
+    const URI="https://api.spotify.com/v1/artists/1mX1TWKpNxDSAH16LgDfiR/top-tracks?market=US"
 
     const PETICION={
         method:"GET",
-        headers:{Authorization:"Bearer BQCgFAOXQ9HW1P0p7HcqAafSjG6umUo7L1A4WNyXAGOLRDC5PEa-iLsHksXBlj2P61mKD3_9cnfoUlwr4ADrVyM9GjZQxMuhKpoBxdWX-abB6xpBr1UJX663-2nRDQ8QNNeAWRyk9bSqrwPT2TZfyMuo7Z32fnr4i3V65-8LJG6EkFThHe_wl78"}
+        headers:{Authorization:" Bearer BQBXCoo6102JsSGNAU7Clh25fZMrYvLMivhudbKSwC7cUPHD4ZINpHGwfQjON3xIjzYKLqmESXr6HaocpbBBE8st-ICUScoaHoHkft8_zldQhpVo6nZnweQmWk9YQUCkFJ3x5xXmdsd6pRnKTHwqNZA7FFk5zBxYfE9w-6STq4mbZ_NDbZx4T9tQOxU6qFw"}
     }
 
     let respuesta=await fetch(URI,PETICION)
 
     let canciones=await respuesta.json()
 
-    console.log(canciones)
+    return (canciones)
 
 }
