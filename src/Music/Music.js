@@ -1,6 +1,6 @@
 import {servicioscancionesTop} from '../services/servicioCanciones.js'
 import { useEffect, useState } from 'react'
-
+import { Footer } from '../shared/Footer/Footer.js'
 
 export function Music(){
     //usando el useState para amacenar la respuesta 
@@ -52,9 +52,11 @@ export function Music(){
                 } 
                  </div>
                   
+                 <Footer/>
             </>
 
         )
+        
 
     }
  

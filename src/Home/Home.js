@@ -34,8 +34,8 @@ export function Home(){
                                  <i className="bi bi-vinyl-fill icono fw-bold"></i>
                                 </div>
                                 <div className="col-9 text-start align-self-center">
-                                    <h3 className="fw-bold">Med</h3>
-                                    <h5>Dec 2</h5>
+                                    <h3 className="fw-bold">Mexico</h3>
+                                    <h5>enero 2023</h5>
                                 </div>
                             </div>  
 
@@ -45,7 +45,7 @@ export function Home(){
                                 </div>
                                 <div className="col-9 text-start align-self-center">
                                     <h3 className="fw-bold">Cali</h3>
-                                    <h5>Dec 3</h5>
+                                    <h5>enero 2023</h5>
                                 </div>
                             </div>  
 
@@ -54,8 +54,8 @@ export function Home(){
                                  <i className="bi bi-vinyl-fill icono fw-bold"></i>
                                 </div>
                                 <div className="col-9 text-start align-self-center">
-                                    <h3 className="fw-bold">Bog</h3>
-                                    <h5>Dec 4</h5>
+                                    <h3 className="fw-bold">new york</h3>
+                                    <h5>febrero 2023</h5>
                                 </div>
                             </div>  
 
@@ -64,8 +64,8 @@ export function Home(){
                                  <i className="bi bi-vinyl-fill icono fw-bold"></i>
                                 </div>
                                 <div className="col-9 text-start align-self-center">
-                                    <h3 className="fw-bold">Barr</h3>
-                                    <h5>Dec 5</h5>
+                                    <h3 className="fw-bold">cartagena</h3>
+                                    <h5>enero 2023</h5>
                                 </div>
                             </div>  
 
